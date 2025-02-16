@@ -96,8 +96,8 @@ Promise 有三种状态：pending、fulfilled、rejected。
 
 如果一个 Promise 已经被兑现或拒绝，即不再处于待定状态，那么则称之为已敲定（settled）。
 
-
 ![alt text](image.png)
+⬆️ 来自: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
 ```js
 const myFirstPromise = new Promise((resolve, reject) => {
