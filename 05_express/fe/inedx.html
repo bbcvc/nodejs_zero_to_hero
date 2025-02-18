@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .todo-list { margin: 20px 0; }
+    .todo-item { margin: 10px 0; padding: 10px; border: 1px solid #ddd; }
+    .todo-item.completed { text-decoration: line-through; color: #888; }
+  </style>
+</head>
+<body>
+  <h1>Todo List</h1>
+  <div>
+    <input type="text" id="todoInput" placeholder="Add new todo">
+    <button id="addTodo">Add Todo</button>
+  </div>
+  <div class="todo-list" id="todoList"></div>
+
+  <script src="index.js" type="module"></script>
+</body>
+</html>
