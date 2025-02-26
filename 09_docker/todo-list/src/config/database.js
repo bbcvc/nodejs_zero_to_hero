@@ -11,7 +11,22 @@ const pool = mysql.createPool({
   port: process.env.DB_PORT,
   waitForConnections: true,
   connectionLimit: 10,
-  queueLimit: 0
+  queueLimit: 0,
+  enableKeepAlive: true,
+  keepAliveInitialDelay: 0
 });
+
+const testConnection = async () => {
+  try {
+    const connection = await pool.getConnection();
+    console.log('数据库连接成功');
+    connection.release();
+  } catch (error) {
+    console.error('数据库连接失败:', error.message);
+    throw error;
+  }
+};
+
+testConnection();
 
 export default pool; 
